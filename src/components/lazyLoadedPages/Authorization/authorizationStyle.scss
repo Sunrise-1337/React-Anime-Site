@@ -1,0 +1,132 @@
+.auth{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    
+    input{
+        padding-left: 8px;
+        height: 30px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    h2{
+        color: white;
+        margin-bottom: 25px;
+    }
+
+    
+    &__buttons{
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__reg, &__log{  
+        position: relative;
+        min-height: 435px;
+        padding: 10% 0;
+        flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &-question{
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            background-color: gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        &-error{
+            display: none;
+            position: absolute;
+            right: -20px;
+            left: -20px;
+            gap: 15px;
+            padding: 15px 0;
+            top: 200px;
+            background: #0b0c2a;
+            border: 3px solid #e53637;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 10px;
+        }
+
+        &-question:hover &-error{
+            display: flex;
+        }
+
+        &-form{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        &-warn{
+            max-width: 207px;
+            width: 100%;
+            padding: 10px 0;
+            font-size: 15px;
+            font-weight: bold;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            color: white;
+            background-color: grey;
+        }
+
+        &-btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 35px;
+            color: white;
+            background-color: #e53637;
+            font-weight: bold;
+            border-radius: 15px;
+            width: 120px;
+            cursor: pointer;
+            outline: none;
+            border: none;
+        }
+    }
+
+    &__log{
+        border-right: 2px solid white;
+    }
+
+    &__reg{
+        border-left: 2px solid white;
+    }
+}
+
+@media (max-width: 767px){
+    .auth{
+        flex-direction: column;
+        align-items: center;
+    
+        &__reg, &__log{ 
+            border: 0;
+        }
+
+        &__reg{
+            border-top:  2px solid white;
+        }
+        
+        &__log{
+            border-bottom:  2px solid white;
+        }
+    }
+}

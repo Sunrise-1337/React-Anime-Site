@@ -1,25 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+
+import Header from "./components/Header/Header";
+import Footer from './components/Footer/Footer';
+import Home from './components/Pages/Home/Home';
+import SingleAnime from './components/Pages/SingleAnime/SingleAnime';
+import Anime from './components/Pages/Anime/Anime';
+import Search from './components/Pages/Search/Search';
+
+const Authorization = React.lazy(() => import('./components/lazyLoadedPages/Authorization/Authorization'));
+const Profile = React.lazy(() => import('./components/lazyLoadedPages/Profile/Profile'));
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/anime/:id" element={<SingleAnime />} />
+            <Route path="/anime" element={<Anime />} />
+            <Route path="/search" element={<Search />} />
+            <Route path="/auth" element={
+              <React.Suspense fallback={<></>}>
+                <Authorization />
+              </React.Suspense>
+            } />
+            <Route path="/profile" element={
+              <React.Suspense fallback={<></>}>
+                <Profile />
+              </React.Suspense>
+            } />
+        </Routes>
+      <Footer />
+    </>
   );
 }
 

@@ -1,0 +1,84 @@
+.recc{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 6%;
+
+    &__top{
+        &-wrap{
+            display: flex;
+            flex-basis: 100%;
+            color: white;
+            font-weight: bold;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+        
+        &-header{
+            font-size: 23px;
+            text-transform: uppercase;
+        }
+
+        &-span{
+            display: inline-block;
+            height: 32px;
+            width: 4px;
+            background-color: #e53637;
+            margin-right: 20px;
+        }
+    }
+
+    a, a:hover, a:visited, a:active {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    &__anime{
+        &-wrap{
+            width: 183px;
+            flex-basis: 20%;
+            color: white;
+            font-size: 21px;
+            font-weight: bold;
+            line-height: 22px;
+            text-align: center;
+        }
+
+        &-pic{
+            height: 375px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 5%;
+            margin-bottom: 15px;
+        }
+
+        &-name{
+            line-height: 33px;
+        }
+    }
+}
+
+@media (max-width: 1023px){
+    .recc{
+        gap: 14%;
+    }
+
+    .recc__anime-wrap{
+        max-width: 273px;
+        flex-basis: 60%;
+        font-size: 30px;
+        line-height: 22px;
+        margin-bottom: 30px;
+    }
+
+    .recc__anime-wrap img{
+        height: 380px;
+    }
+}
+
+@media (max-width: 786px){
+    .recc{
+        gap: 10%;
+    }
+}

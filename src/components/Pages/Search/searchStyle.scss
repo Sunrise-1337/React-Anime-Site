@@ -1,0 +1,60 @@
+.search{
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    padding-bottom: 30px;
+    gap: 45px;
+
+    &__no-res{
+        color: white;
+        font-size: 70px;
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    &__anime{
+        display: flex;
+        gap: 25px;
+        background-color: #575757c0;
+        padding: 30px 25px;
+        border-radius: 15px;
+        
+        &-pic{
+            width: 100%;
+            max-width: 300px;
+            border-radius: 15px;
+        }
+
+        &-header{
+            font-size: 35px;
+            margin: 0 0 8px;
+            color: white;
+        }
+
+        &-desc{
+            color: #b7b7b7;
+            font-size: 20px;
+        }
+
+        &-link{
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 1023px){
+    .search{
+        width: 70%;
+    }
+
+    .search__anime{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 767px){
+    .search{
+        width: 50%;
+    }
+}
