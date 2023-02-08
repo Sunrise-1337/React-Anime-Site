@@ -3,6 +3,7 @@ This project contains is written with the use of React, Redux, Redux ToolKit, Re
 CSS preprocessor: SCSS
 
 # Used libraries
+- Redux
 - ReduxJS Toolkit
 - React-Redux
 - Ant Design (UI kit)
