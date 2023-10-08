@@ -3,8 +3,8 @@ import { NavLink } from "react-router-dom";
 
 import "./footerStyle.scss"
 
-import logo from "../../assets/images/logo.png";
-import scroll from "../../assets/images/scroll.png";
+import logo from "../../../assets/images/logo.png";
+import scroll from "../../../assets/images/scroll.png";
 
 function Footer() {
 

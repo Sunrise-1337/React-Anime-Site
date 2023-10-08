@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
-import { RecInterface } from "../../interfaces/rec-interface";
+import { RecInterface } from "../../../../../interfaces/rec-interface";
 
 import "./recomendationsStyle.scss"
 

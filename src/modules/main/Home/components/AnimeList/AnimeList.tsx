@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { AnimeInterface } from "../../../../interfaces/anime-interface";
+import { AnimeInterface } from "../../../../../interfaces/anime-interface";
 
-import "../homeStyle.scss"
+import "../../homeStyle.scss"
 
 interface animeListProps {
     animes: AnimeInterface[];

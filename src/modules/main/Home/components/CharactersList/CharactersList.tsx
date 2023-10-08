@@ -1,7 +1,7 @@
 import React from "react";
-import { CharacterInterface } from "../../../../interfaces/character-interface";
+import { CharacterInterface } from "../../../../../interfaces/character-interface";
 
-import "../homeStyle.scss"
+import "../../homeStyle.scss"
 
 interface charactersListProps{
     characters: CharacterInterface[]

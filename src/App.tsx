@@ -3,15 +3,15 @@ import './App.scss';
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 
-import Header from "./components/Header/Header";
-import Footer from './components/Footer/Footer';
-import Home from './components/Pages/Home/Home';
-import SingleAnime from './components/Pages/SingleAnime/SingleAnime';
-import Anime from './components/Pages/Anime/Anime';
-import Search from './components/Pages/Search/Search';
+import Header from "./shared/components/Header/Header";
+import Footer from './shared/components/Footer/Footer';
+import Home from './modules/main/Home/Home';
+import SingleAnime from './modules/main/SingleAnime/SingleAnime';
+import Anime from './modules/main/Anime/Anime';
+import Search from './modules/main/Search/Search';
 
-const Authorization = React.lazy(() => import('./components/lazyLoadedPages/Authorization/Authorization'));
-const Profile = React.lazy(() => import('./components/lazyLoadedPages/Profile/Profile'));
+const Authorization = React.lazy(() => import('./modules/auth/Authorization/Authorization'));
+const Profile = React.lazy(() => import('./modules/auth/Profile/Profile'));
 
 function App() {
   return (

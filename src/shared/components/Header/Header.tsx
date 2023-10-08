@@ -3,11 +3,11 @@ import { Link, NavLink } from "react-router-dom";
 
 import "./headerStyle.scss"
 
-import logo from "../../assets/images/logo.png"
-import search from "../../assets/images/search.png"
-import profile from "../../assets/images/prof.png"
-import ham from "../../assets/images/ham.png"
-import cross from "../../assets/images/cross.png"
+import logo from "../../../assets/images/logo.png"
+import search from "../../../assets/images/search.png"
+import profile from "../../../assets/images/prof.png"
+import ham from "../../../assets/images/ham.png"
+import cross from "../../../assets/images/cross.png"
 
 function Header() {
     const [isMobMenu, setIsMobMenu] = useState<boolean>(false);

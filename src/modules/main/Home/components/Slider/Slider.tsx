@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import "./sliderStyle.scss"
 
-import { AnimeInterface } from "../../interfaces/anime-interface";
+import { AnimeInterface } from "../../../../../interfaces/anime-interface";
 import { Link } from "react-router-dom";
 import { Carousel } from 'antd';
 import Arrow from "./Arrow/Arrow";

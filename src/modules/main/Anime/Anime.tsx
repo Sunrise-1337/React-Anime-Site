@@ -10,17 +10,18 @@ function Anime() {
     const [animeRecs, setAnimeRecs] = useState<CompareRecInterface[]>([]);
 
     useEffect(() => {
-        const fetchData = async () => {
-            setAnimeRecs((await getCompareRecomendations()))
-        }
-      
         fetchData()
     }, [])
 
+    
+    async function fetchData (): Promise<void> {
+        setAnimeRecs((await getCompareRecomendations()))
+    }
+
     return (
         <div className="rec">
-            {animeRecs.map((anime, i) =>
-                <div key={i} className="rec__reccom">
+            {animeRecs.map((anime) =>
+                <div key={anime.content} className="rec__reccom">
                     <h2 className="rec__header">{anime.content}</h2>
                     {anime.entry.map(rec =>
                         <Link to={'/anime/'+ rec.mal_id} className="rec__anime-link">

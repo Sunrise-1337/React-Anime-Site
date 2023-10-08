@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./playerStyle.scss"
-import videoLink from "../../assets/video/rick-astley-never-gonna-give-you-up.mp4"
+import videoLink from "../../../../../assets/video/rick-astley-never-gonna-give-you-up.mp4"
 
 function Player() {
 
